@@ -498,6 +498,46 @@ a {
         }
       }
     }
+
+    /* !------ Footer ------- */
+
+    & footer {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      gap: 1rem;
+      position: relative;
+      padding: 5rem 3rem 6rem 3rem;
+
+      & .contact {
+        grid-column: 1/4;
+        margin: 0rem 0 0 0;
+      }
+
+      & .nav-list {
+        align-items: center;
+        text-align: left;
+      }
+
+      & nav:first-of-type {
+        grid-column: 4/7;
+      }
+
+      & nav:first-of-type + nav {
+        grid-column: 7/10;
+      }
+
+      & .socials {
+        grid-column: 10/12;
+      }
+
+      & nav:first-of-type,
+      & nav:first-of-type + nav,
+      & .socials {
+        position: absolute;
+        top: 55%;
+      }
+    }
   }
 }
 
@@ -582,6 +622,7 @@ a {
       }
     }
 
+    /* ! --- Early Access Section ---- */
     & .early-access {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -613,6 +654,39 @@ a {
           width: 250px;
           padding: 0.7rem;
         }
+      }
+    }
+
+    /*!Footer */
+
+    & footer {
+      grid-template-columns: repeat(14, 1fr);
+      gap: 1.6rem;
+
+      & .contact {
+        grid-column: 1/5;
+        margin: 0rem 0 0 0;
+      }
+
+      & nav:first-of-type {
+        grid-column: 5/8;
+        width: 100%;
+      }
+
+      & nav:first-of-type + nav {
+        grid-column: 8/11;
+        width: 100%;
+      }
+
+      & .socials {
+        grid-column: 11/12;
+      }
+
+      & nav:first-of-type,
+      & nav:first-of-type + nav,
+      & .socials {
+        position: absolute;
+        top: 50%;
       }
     }
   }
