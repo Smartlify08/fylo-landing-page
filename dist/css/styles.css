@@ -26,16 +26,22 @@ body {
 .btn {
   width: 250px;
   padding: 0.7rem;
-  border-radius: 2px;
+  border-radius: 3px;
   border: none;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-family: var(--font-1);
+  font-weight: 700;
   cursor: pointer;
+  box-shadow: 3px 3px 5px 1px hsl(0, 0%, 75%, 0.4);
 }
 
 .btn-primary {
   background-color: var(--BrightBlue);
   color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: hsl(221, 92%, 70%);
 }
 
 a {
@@ -117,9 +123,23 @@ a {
         border: 1px solid var(--VeryDarkBlue);
         display: block;
         width: 250px;
-        padding: 0.5rem;
+        padding: 0.7rem;
         border-radius: 2px;
         margin-bottom: 0.7rem;
+        font-size: 0.7rem;
+        color: var(--DesaturatedBlue);
+      }
+
+      & .input-1:focus-visible:invalid {
+        border: 1px solid rgb(242, 15, 15);
+        position: relative;
+      }
+
+      & .input-1:invalid::after {
+        position: absolute;
+        top: 0;
+        content: "Please check your email";
+        border: 2px solid red;
       }
     }
 
@@ -172,6 +192,10 @@ a {
         justify-content: center;
         gap: 0.5rem;
         text-align: center;
+      }
+
+      & a:hover {
+        color: hsl(175, 75%, 49%);
       }
 
       & i {
@@ -271,10 +295,15 @@ a {
       & .input-2 {
         display: block;
         width: 250px;
-        padding: 0.4rem;
+        padding: 0.7rem;
         margin-bottom: 0.5rem;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         font-weight: 400;
+        color: var(--DesaturatedBlue);
+      }
+
+      & .btn {
+        box-shadow: 3px 3px 5px 1px hsl(243, 87%, 12%, 0.1);
       }
     }
   }
@@ -331,6 +360,10 @@ a {
           font-family: var(--font-1);
           font-size: 0.9rem;
         }
+
+        & a:hover {
+          color: var(--DesaturatedBlue);
+        }
       }
     }
 
@@ -341,6 +374,11 @@ a {
 
       & .icon {
         color: var(--LightGrayishBlue);
+        cursor: pointer;
+      }
+
+      & .icon:hover {
+        color: var(--BrightBlue);
       }
     }
   }
@@ -691,4 +729,20 @@ a {
       }
     }
   }
+}
+
+input[type="email"] {
+  outline: none;
+}
+
+input[type="email"]:focus-visible:invalid {
+  border: 1px solid rgb(242, 15, 15);
+  position: relative;
+}
+
+input[type="email"]:invalid::after {
+  position: absolute;
+  top: 0;
+  content: "Please check your email";
+  border: 2px solid rgb(242, 15, 15);
 }

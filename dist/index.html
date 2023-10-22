@@ -58,10 +58,22 @@
             and co-workers.
           </p>
           <section class="email-section">
-            <input type="email" name="email" id="#email" class="input-1" />
-            <button type="submit" class="btn btn-submit btn-primary">
-              Get Started
-            </button>
+            <input
+              type="email"
+              name="email"
+              placeholder="email@example.com"
+              class="input-1"
+              id="email"
+              pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"
+              ;
+              title="please check your email"
+              required
+            />
+            <input
+              type="submit"
+              class="btn btn-submit btn-primary"
+              value="Get Started"
+            />
           </section>
         </section>
         <section class="illustration">
@@ -135,10 +147,15 @@
             placeholder="email@example.com"
             class="input-2"
             id="email"
+            pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"
+            title="please check your email"
+            required
           />
-          <button type="submit" class="btn btn-primary btn-submit">
-            Get started for free
-          </button>
+          <input
+            type="submit"
+            class="btn btn-primary btn-submit"
+            value="Get started for free"
+          />
         </section>
       </section>
 
