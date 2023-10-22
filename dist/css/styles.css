@@ -20,6 +20,7 @@ body {
   line-height: 1.2rem;
   font-size: 15px;
   font-family: var(--font-2);
+  position: relative;
 }
 
 /* ---Global styles---- */
@@ -155,13 +156,13 @@ a {
 
   & .stay-productive {
     /* border: 2px solid; */
-    background: url(../images/bg-curve-mobile.png) no-repeat;
     background-color: var(--LightGrayishBlue);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 1.1rem;
+    padding: 2.7rem 1.1rem;
     gap: 1.1rem;
+    position: relative;
 
     & .productive {
       order: 2;
